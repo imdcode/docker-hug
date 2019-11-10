@@ -22,7 +22,7 @@ docker run -it --name mpti2019 -p 8000:8000 -v /Users/silviocs/hug_api/docker-hu
 
 Note que a instância é nomeada "mpti2019" e que a porta 8000 do host é mapeada para a porta 8000 do container. Além disso o diretório "/Users/silviocs/hug_api/docker-hug/app" do host é mapeado para o diretório "/usr/src/app".
 
-### Testando a API teste
+## Testando a API teste
 
 Após iniciar a instância do container você pode testar os seus endpoints através do navegador ou utilizar o curl na linha de comando.
 
@@ -41,19 +41,19 @@ curl -i "localhost:8000/endereco/59080060"
 curl -i "localhost:8000/pic"
 ```
 
-### Verificando o endereço IP address da instância 'mpti2019'
+## Verificando o endereço IP address da instância 'mpti2019'
 
 ```
 docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mpti2019
 ```
 
-### Verificando o mapeamento da port 8000
+## Verificando o mapeamento da port 8000
 
 ```
 docker port mpti2019 8000
 ```
 
-### Limpando tudo
+## Limpando tudo
 
 Primeiro é necessário parar a execução da instância "mpti2019". Embora aqui utilizemos o nome que demos ao instanciar o container, poderia ser também utilizado o ID do container. 
 
@@ -72,3 +72,10 @@ Removendo a imagem "docker-hug:1.0".
 ```
 docker image rm docker-hug:1.0
 ```
+
+## Referências 
+
+* [Docker](https://docs.docker.com/) - The docker documentation.
+* [Hug](https://www.hug.rest/) - Embrace the APIs of the future.
+* [REST API](https://www.restapitutorial.com/) - Learn REST: A RESTful Tutorial.
+* [XML ElementTree](https://www.datacamp.com/community/tutorials/python-xml-elementtree) - Python XML with ElementTree: Beginner's Guide
