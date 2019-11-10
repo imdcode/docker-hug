@@ -22,6 +22,25 @@ docker run -it --name mpti2019 -p 8000:8000 -v /Users/silviocs/hug_api/docker-hu
 
 Note que a instância é nomeada "mpti2019" e que a porta 8000 do host é mapeada para a porta 8000 do container. Além disso o diretório "/Users/silviocs/hug_api/docker-hug/app" do host é mapeado para o diretório "/usr/src/app".
 
+### Testando a API teste
+
+Após iniciar a instância do container você pode testar os seus endpoints através do navegador ou utilizar o curl na linha de comando.
+
+Utilizando o navegador:
+```
+localhost:8000/calc?valor=1.2
+localhost:8000/teste/22/55
+localhost:8000/endereco/59080060
+localhost:8000/pic
+```
+Utilizando o curl:
+```
+curl -i "localhost:8000/calc?valor=1.2"
+curl -i "localhost:8000/teste/22/55"
+curl -i "localhost:8000/endereco/59080060"
+curl -i "localhost:8000/pic"
+```
+
 ### Verificando o endereço IP address da instância 'mpti2019'
 
 ```
